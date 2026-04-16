@@ -34,7 +34,7 @@ const products = [
     name: "Souvenir de Baptême — Variante 2",
     category: "Religieux" as ActiveCategory,
     price: { eur: 4.50, chf: 5.00 },
-    image: "/images/illust-bapteme-2-ERDYlm.png",
+    image: "/images/illust-bapteme-2-ERDYIm.png",
     alt: "Illustration de baptême variante 2 aquarelle",
   },
   {
@@ -80,11 +80,11 @@ const products = [
   },
   {
     id: 10,
-    name: "Design Floral — Ensemble Promo",
-    category: "Variés" as ActiveCategory,
+    name: "Collection Complète — Toutes images pieuses",
+    category: "Religieux" as ActiveCategory,
     price: { eur: 12.00, chf: 13.00 },
     image: "/images/ensemble-promo.png",
-    alt: "Ensemble promotionnel papeterie florale",
+    alt: "Collection complète d'illustrations pieuses aquarelle",
   },
 ];
 

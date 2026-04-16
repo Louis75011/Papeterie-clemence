@@ -35,20 +35,44 @@ export default function App() {
         <Personalization />
 
         {/* About Section */}
-        <section id="a-propos" className="py-24 bg-brand-white" aria-labelledby="about-heading">
-          <div className="max-w-7xl mx-auto px-6">
+        <section id="a-propos" className="relative py-24 bg-brand-white overflow-hidden" aria-labelledby="about-heading">
+          {/* Décor floral en fond bas */}
+          <div className="absolute bottom-0 left-0 right-0 h-64 pointer-events-none select-none" aria-hidden="true">
+            <img
+              src="/images/footer_design_floral_clemence.jpg"
+              alt=""
+              className="w-full h-full object-cover object-top opacity-15"
+            />
+          </div>
+
+          <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="grid lg:grid-cols-2 gap-20 items-center">
+              {/* Portrait illustré avec décor floral autour */}
               <div className="order-2 lg:order-1">
-                <div className="aspect-square rounded-[4rem] overflow-hidden shadow-2xl shadow-brand-sage/10 relative">
-                  <img
-                    src="/images/clemence-visage-logo.jpg"
-                    alt="Portrait de Clémence d'Ogny, illustratrice"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    width="800"
-                    height="800"
-                  />
-                  <div className="absolute inset-0 border-[20px] border-white/20 rounded-[4rem]" aria-hidden="true" />
+                <div className="relative flex items-center justify-center">
+                  {/* Cercle floral décoratif derrière */}
+                  <div className="absolute inset-0 rounded-full overflow-hidden opacity-20 scale-110" aria-hidden="true">
+                    <img
+                      src="/images/footer_design_floral_clemence.jpg"
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  {/* Blob déco */}
+                  <div className="absolute -top-8 -right-8 w-32 h-32 bg-brand-peach/30 rounded-full blur-2xl" aria-hidden="true" />
+                  <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-brand-mint/30 rounded-full blur-2xl" aria-hidden="true" />
+
+                  {/* Portrait dessiné — taille généreuse, pas de rognage */}
+                  <div className="relative w-80 h-80 lg:w-[420px] lg:h-[420px] rounded-full bg-brand-mint/20 shadow-2xl shadow-brand-sage/15 overflow-hidden border-8 border-brand-white">
+                    <img
+                      src="/images/clemence-visage-logo.jpg"
+                      alt="Portrait illustré de Clémence d'Ogny, illustratrice"
+                      className="w-full h-full object-contain p-4"
+                      loading="lazy"
+                      width="420"
+                      height="420"
+                    />
+                  </div>
                 </div>
               </div>
 
