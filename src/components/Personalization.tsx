@@ -17,20 +17,20 @@ export default function Personalization() {
                 <span className="italic text-brand-sage">à votre image.</span>
               </h2>
               <p className="text-brand-ink/60 text-lg mb-10 leading-relaxed">
-                Vous souhaitez une création unique pour un événement particulier ? 
+                Vous souhaitez une création unique pour un événement particulier ?
                 Je vous propose de personnaliser mes illustrations ou d'en créer une entièrement sur mesure pour vous.
               </p>
-              
+
               <ul className="space-y-6 mb-12">
-                <FeatureItem 
-                  icon={<Palette size={20} />} 
-                  title="Couleurs & Détails" 
-                  desc="Adaptez les teintes et les éléments graphiques à votre thème." 
+                <FeatureItem
+                  icon={<Palette size={20} />}
+                  title="Couleurs & Détails"
+                  desc="Adaptez les teintes et les éléments graphiques à votre thème."
                 />
-                <FeatureItem 
-                  icon={<Send size={20} />} 
-                  title="Textes Personnalisés" 
-                  desc="Ajoutez des prénoms, des dates ou des citations choisies." 
+                <FeatureItem
+                  icon={<Send size={20} />}
+                  title="Textes Personnalisés"
+                  desc="Ajoutez des prénoms, des dates ou des citations choisies."
                 />
               </ul>
 
@@ -41,7 +41,7 @@ export default function Personalization() {
 
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
-                <motion.div 
+                <motion.div
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
@@ -50,7 +50,7 @@ export default function Personalization() {
                   <img src="/images/illust-affiches-fleurs-sgkePPU3.png" alt="Affiche florale illustrée" className="rounded-3xl shadow-lg" loading="lazy" width="400" height="500" />
                   <img src="/images/illust-papeterie-CZwG-5nb.png" alt="Papeterie personnalisée" className="rounded-3xl shadow-lg" loading="lazy" width="400" height="300" />
                 </motion.div>
-                <motion.div 
+                <motion.div
                   initial={{ y: -20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
@@ -61,7 +61,7 @@ export default function Personalization() {
                   <img src="/images/illust-communion-D2Z8td6V.png" alt="Illustration communion personnalisée" className="rounded-3xl shadow-lg" loading="lazy" width="400" height="500" />
                 </motion.div>
               </div>
-              
+
               {/* Decorative circle */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-peach/10 rounded-full blur-3xl -z-10" aria-hidden="true" />
             </div>

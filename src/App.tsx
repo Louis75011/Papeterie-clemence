@@ -11,14 +11,14 @@ export default function App() {
   return (
     <div className="min-h-screen selection:bg-brand-sage/30 selection:text-brand-ink">
       <Header />
-      
+
       <main>
         <Hero />
-        
+
         <Categories />
-        
+
         <ProductGrid />
-        
+
         <Personalization />
 
         {/* About Section */}
@@ -27,9 +27,9 @@ export default function App() {
             <div className="grid lg:grid-cols-2 gap-20 items-center">
               <div className="order-2 lg:order-1">
                 <div className="aspect-square rounded-[4rem] overflow-hidden shadow-2xl shadow-brand-sage/10 relative">
-                  <img 
-                    src="/images/clemence-visage-logo.jpg" 
-                    alt="Portrait de Clémence d'Ogny, illustratrice" 
+                  <img
+                    src="/images/clemence-visage-logo.jpg"
+                    alt="Portrait de Clémence d'Ogny, illustratrice"
                     className="w-full h-full object-cover"
                     loading="lazy"
                     width="800"
@@ -38,7 +38,7 @@ export default function App() {
                   <div className="absolute inset-0 border-[20px] border-white/20 rounded-[4rem]" aria-hidden="true" />
                 </div>
               </div>
-              
+
               <div className="order-1 lg:order-2">
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-peach/20 rounded-full text-[10px] uppercase tracking-widest font-bold text-brand-sage mb-6">
                   <Info size={12} aria-hidden="true" />
@@ -59,7 +59,7 @@ export default function App() {
                     Mon travail s'articule autour de deux axes : la célébration de la foi chrétienne à travers des images de saints et de sacrements, et la création de designs variés pour tous les moments de la vie.
                   </p>
                 </div>
-                
+
                 <div className="mt-12 grid grid-cols-2 gap-8 border-t border-brand-sage/20 pt-12">
                   <div>
                     <p className="text-3xl font-serif text-brand-sage mb-1">100%</p>
@@ -89,14 +89,14 @@ export default function App() {
                 Qu'il s'agisse d'une commande groupée pour une paroisse ou d'une illustration unique, je suis à votre écoute.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <a 
-                  href="https://wa.me/33600000000" 
+                <a
+                  href="https://wa.me/33600000000"
                   className="px-10 py-5 bg-white text-brand-sage rounded-full font-bold hover:bg-brand-ink hover:text-white transition-all shadow-xl shadow-black/10"
                 >
                   Me contacter sur WhatsApp
                 </a>
-                <a 
-                  href="mailto:clemence@clemence-papeterie-studio.fr" 
+                <a
+                  href="mailto:clemence@clemence-papeterie-studio.fr"
                   className="px-10 py-5 border border-white/30 text-white rounded-full font-bold hover:bg-white/10 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
                 >
                   Envoyer un email

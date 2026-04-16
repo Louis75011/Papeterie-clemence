@@ -10,7 +10,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-brand-white/80 backdrop-blur-md border-b border-brand-sage/20" role="banner">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <button 
+          <button
             className="lg:hidden p-2 hover:bg-brand-sage/10 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-sage"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
@@ -19,9 +19,9 @@ export default function Header() {
             {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
           <a href="#" className="flex items-center gap-3" aria-label="Clémence d'Ogny — Accueil">
-            <img 
-              src="/images/logo-clemence.png" 
-              alt="Logo Clémence d'Ogny" 
+            <img
+              src="/images/logo-clemence.png"
+              alt="Logo Clémence d'Ogny"
               className="w-10 h-10 object-contain"
               width="40"
               height="40"
@@ -63,14 +63,14 @@ export default function Header() {
           <MobileNavLink href="#personnalisation" onClick={() => setIsOpen(false)}>Personnalisation</MobileNavLink>
           <MobileNavLink href="#a-propos" onClick={() => setIsOpen(false)}>À Propos</MobileNavLink>
           <MobileNavLink href="#contact" onClick={() => setIsOpen(false)}>Contact</MobileNavLink>
-          
+
           <div className="pt-6 border-t border-brand-sage/10 flex items-center justify-between">
             <span className="text-sm font-medium">Devises acceptées</span>
             <span className="text-sm font-semibold text-brand-sage">EUR & CHF</span>
           </div>
-          
-          <a 
-            href="https://wa.me/33600000000" 
+
+          <a
+            href="https://wa.me/33600000000"
             className="flex items-center justify-center gap-2 bg-brand-sage text-white py-4 rounded-xl font-medium"
           >
             <MessageCircle size={20} />
@@ -84,8 +84,8 @@ export default function Header() {
 
 function NavLink({ href, children }: { href: string; children: ReactNode }) {
   return (
-    <a 
-      href={href} 
+    <a
+      href={href}
       className="text-sm font-medium text-brand-ink/70 hover:text-brand-ink transition-colors relative group"
     >
       {children}
@@ -96,8 +96,8 @@ function NavLink({ href, children }: { href: string; children: ReactNode }) {
 
 function MobileNavLink({ href, children, onClick }: { href: string; children: ReactNode; onClick: () => void }) {
   return (
-    <a 
-      href={href} 
+    <a
+      href={href}
       onClick={onClick}
       className="text-2xl font-serif text-brand-ink"
     >

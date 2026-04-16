@@ -79,15 +79,15 @@ export default function ProductGrid() {
               className="group"
             >
               <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-brand-white mb-6 relative shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 transition-all duration-500">
-                <img 
-                  src={product.image} 
+                <img
+                  src={product.image}
                   alt={product.alt}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   loading="lazy"
                   width="400"
                   height="500"
                 />
-                <button 
+                <button
                   className="absolute top-4 right-4 p-2 bg-brand-white/80 backdrop-blur-md rounded-full text-brand-ink/40 hover:text-red-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-red-300"
                   aria-label={`Ajouter ${product.name} aux favoris`}
                 >
@@ -116,61 +116,4 @@ export default function ProductGrid() {
   );
 }
 
-export default function ProductGrid() {
-  return (
-    <section className="py-24 bg-brand-cream">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div>
-            <h2 className="text-4xl font-serif mb-4">Dernières Créations</h2>
-            <p className="text-brand-ink/60">Une sélection de nos illustrations les plus appréciées.</p>
-          </div>
-          <div className="flex gap-4">
-            <button className="px-6 py-2 rounded-full border border-brand-ink/10 text-sm font-medium hover:bg-white transition-colors">Tout voir</button>
-            <button className="px-6 py-2 rounded-full bg-brand-sage/10 text-brand-sage text-sm font-medium">Religieux</button>
-            <button className="px-6 py-2 rounded-full border border-brand-ink/10 text-sm font-medium hover:bg-white transition-colors">Variés</button>
-          </div>
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {products.map((product, idx) => (
-            <motion.div
-              key={product.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="group"
-            >
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-white mb-6 relative shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 transition-all duration-500">
-                <img 
-                  src={product.image} 
-                  alt={product.name}
-                  className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
-                />
-                <button className="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full text-brand-ink/40 hover:text-red-400 transition-colors">
-                  <Heart size={18} />
-                </button>
-                <div className="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <button className="w-full py-3 bg-brand-ink text-white rounded-xl text-sm font-medium flex items-center justify-center gap-2">
-                    <Plus size={16} />
-                    Ajouter au panier
-                  </button>
-                </div>
-              </div>
-              <div className="px-2">
-                <p className="text-[10px] uppercase tracking-widest text-brand-sage font-bold mb-1">{product.category}</p>
-                <h4 className="font-serif text-xl mb-2 group-hover:text-brand-sage transition-colors">{product.name}</h4>
-                <div className="flex items-center gap-4 text-sm font-medium">
-                  <span className="text-brand-ink">{product.price.eur.toFixed(2)} €</span>
-                  <span className="text-brand-ink/40">{product.price.chf.toFixed(2)} CHF</span>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}

@@ -24,18 +24,18 @@ export default function Hero() {
               poétique.
             </h1>
             <p className="text-lg text-brand-ink/60 max-w-md mb-10 leading-relaxed">
-              Des illustrations délicates pour célébrer les moments précieux de la vie. 
+              Des illustrations délicates pour célébrer les moments précieux de la vie.
               Créations originales, religieuses et variées, pensées avec douceur.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a 
+              <a
                 href="#catalogue"
                 className="px-8 py-4 bg-brand-ink text-brand-white rounded-full font-medium hover:bg-brand-sage transition-colors flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-sage"
               >
                 Découvrir le catalogue
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
               </a>
-              <a 
+              <a
                 href="#personnalisation"
                 className="px-8 py-4 border border-brand-ink/20 rounded-full font-medium hover:bg-brand-sage/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-sage"
               >
@@ -52,8 +52,8 @@ export default function Hero() {
           >
             {/* Image principale : ensemble floral */}
             <div className="aspect-[4/5] rounded-[3rem] overflow-hidden bg-brand-mint/20 relative z-10 shadow-2xl shadow-brand-sage/10">
-              <img 
-                src="/images/ensemble-promo.png" 
+              <img
+                src="/images/ensemble-promo.png"
                 alt="Collection papeterie florale Clémence d'Ogny — ensemble promotionnel"
                 className="w-full h-full object-cover"
                 width="800"
@@ -63,12 +63,12 @@ export default function Hero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-cream/30 to-transparent" aria-hidden="true" />
             </div>
-            
+
             {/* Éléments décoratifs */}
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-brand-peach/20 rounded-full blur-3xl" aria-hidden="true" />
             <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-brand-sage/10 rounded-full blur-3xl" aria-hidden="true" />
-            
-            <motion.div 
+
+            <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -right-6 top-1/4 bg-brand-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl shadow-brand-sage/10 border border-brand-sage/10 z-20 hidden sm:block"
@@ -86,13 +86,13 @@ export default function Hero() {
             </motion.div>
 
             {/* Vignette floral secondaire en bas */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
               className="absolute -bottom-8 -left-8 w-36 h-36 rounded-2xl overflow-hidden shadow-lg border-4 border-brand-white z-20 hidden lg:block"
             >
-              <img 
+              <img
                 src="/images/footer_design_floral_clemence.jpg"
                 alt="Motif floral Clémence"
                 className="w-full h-full object-cover"

@@ -46,18 +46,18 @@ export default function Categories() {
               )}
             >
               <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-                <img 
-                  src={cat.image} 
+                <img
+                  src={cat.image}
                   alt=""
                   className="w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
                   loading="lazy"
                 />
               </div>
-              
+
               <div className="relative z-10">
                 <h3 className="text-3xl font-serif mb-4">{cat.title}</h3>
                 <p className="text-brand-ink/70 mb-8 max-w-sm">{cat.description}</p>
-                <a 
+                <a
                   href={`#${cat.id}`}
                   className="inline-block px-6 py-3 bg-brand-ink text-brand-white rounded-full text-sm font-medium hover:bg-brand-sage transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-sage"
                 >

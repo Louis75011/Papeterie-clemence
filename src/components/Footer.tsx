@@ -15,7 +15,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-brand-cream/50 text-sm leading-relaxed mb-8">
-              Illustratrice indépendante basée en Île-de-France. 
+              Illustratrice indépendante basée en Île-de-France.
               Créations poétiques pour embellir votre quotidien et vos événements.
             </p>
             <div className="flex gap-4">
@@ -38,20 +38,20 @@ export default function Footer() {
           <div>
             <h4 className="font-serif text-xl mb-8">Informations</h4>
             <ul className="space-y-6">
-              <InfoItem 
-                icon={<Truck size={18} />} 
-                title="Livraison" 
-                desc="Expédition par la poste en France et en Suisse." 
+              <InfoItem
+                icon={<Truck size={18} />}
+                title="Livraison"
+                desc="Expédition par la poste en France et en Suisse."
               />
-              <InfoItem 
-                icon={<CreditCard size={18} />} 
-                title="Paiement" 
-                desc="Règlements acceptés en EUR (€) et CHF (Fr.)." 
+              <InfoItem
+                icon={<CreditCard size={18} />}
+                title="Paiement"
+                desc="Règlements acceptés en EUR (€) et CHF (Fr.)."
               />
-              <InfoItem 
-                icon={<MapPin size={18} />} 
-                title="Localisation" 
-                desc="Île-de-France, France." 
+              <InfoItem
+                icon={<MapPin size={18} />}
+                title="Localisation"
+                desc="Île-de-France, France."
               />
             </ul>
           </div>
@@ -61,8 +61,8 @@ export default function Footer() {
             <p className="text-sm text-brand-cream/60 mb-6">
               Une question ? Un projet ? N'hésitez pas à me contacter via WhatsApp pour un échange rapide.
             </p>
-            <a 
-              href="https://wa.me/33600000000" 
+            <a
+              href="https://wa.me/33600000000"
               className="inline-flex items-center gap-3 bg-brand-sage hover:bg-white hover:text-brand-sage transition-all px-6 py-3 rounded-full text-sm font-bold"
             >
               <MessageCircle size={18} />
@@ -85,8 +85,8 @@ export default function Footer() {
 
 function SocialLink({ icon, href }: { icon: ReactNode; href: string }) {
   return (
-    <a 
-      href={href} 
+    <a
+      href={href}
       className="w-10 h-10 rounded-full border border-brand-cream/10 flex items-center justify-center text-brand-cream/60 hover:border-brand-sage hover:text-brand-sage transition-all"
     >
       {icon}
