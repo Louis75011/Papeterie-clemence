@@ -106,8 +106,8 @@ export default function ProductGrid({ activeCategory, onCategoryChange }: Produc
 
   const heading =
     activeCategory === "Religieux" ? "Collection Religieuse & Catholique"
-    : activeCategory === "Variés" ? "Collection Floraux & Variés"
-    : "Toutes les Créations";
+      : activeCategory === "Variés" ? "Collection Floraux & Variés"
+        : "Toutes les Créations";
 
   return (
     <section id="grille-produits" className="py-24 bg-brand-cream/40" aria-labelledby="creations-heading">
