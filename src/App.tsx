@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { useState, useCallback } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Categories from "./components/Categories";
@@ -7,17 +8,29 @@ import Personalization from "./components/Personalization";
 import Footer from "./components/Footer";
 import { Info } from "lucide-react";
 
+export type ActiveCategory = "Tout" | "Religieux" | "Variés";
+
 export default function App() {
+  const [activeCategory, setActiveCategory] = useState<ActiveCategory>("Tout");
+
+  const selectCategory = useCallback((cat: ActiveCategory) => {
+    setActiveCategory(cat);
+    // scroll vers la grille après mise à jour de l'état
+    setTimeout(() => {
+      document.getElementById("grille-produits")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
+  }, []);
+
   return (
     <div className="min-h-screen selection:bg-brand-sage/30 selection:text-brand-ink">
       <Header />
 
       <main>
-        <Hero />
+        <Hero onDiscoverClick={() => selectCategory("Tout")} />
 
-        <Categories />
+        <Categories onSelectCategory={selectCategory} activeCategory={activeCategory} />
 
-        <ProductGrid />
+        <ProductGrid activeCategory={activeCategory} onCategoryChange={setActiveCategory} />
 
         <Personalization />
 

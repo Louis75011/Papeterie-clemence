@@ -1,7 +1,11 @@
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 
-export default function Hero() {
+interface HeroProps {
+  onDiscoverClick?: () => void;
+}
+
+export default function Hero({ onDiscoverClick }: HeroProps) {
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden" aria-label="Présentation">
       {/* Fond dégradé charte */}
@@ -29,7 +33,8 @@ export default function Hero() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="#catalogue"
+                href="#grille-produits"
+                onClick={onDiscoverClick}
                 className="px-8 py-4 bg-brand-ink text-brand-white rounded-full font-medium hover:bg-brand-sage transition-colors flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-sage"
               >
                 Découvrir le catalogue
